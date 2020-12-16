@@ -1,0 +1,18 @@
+error1: Error MSB4019 
+	The imported project “C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\
+	MSBuild\Microsoft\VC\v160\BuildCustomizations\CUDA 10.1.props” was not found. 
+	Confirm that the path in the declaration is correct, and that the file exists on disk. 
+	cdpSimpleQuicksort C:\ProgramData\NVIDIA Corporation\CUDA Samples\v10.1\0_Simple\cdpSimpleQuicksort\
+	cdpSimpleQuicksort_vs2017.vcxproj
+
+solution:Just copy all files from this path (depends on the path you installed CUDA in)
+	C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.1\extras\visual_studio_integration\MSBuildExtensions
+	to this path:
+	C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\BuildCustomizations
+
+error2: C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Platforms\x64\PlatformToolsets\v141\Toolset.targets(36,5):
+	 error MSB8036: The Windows SDK version 10.0.15063.0 was not found. 
+	1>Done building project "simpleTexture3D_vs2017.vcxproj" -- FAILED.
+	========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
+
+solution: Install the required version of Windows SDK or change the SDK version in the project property pages or by right-clicking the solution and selecting "Retarget solution".
